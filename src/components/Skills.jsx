@@ -10,6 +10,7 @@ import {
   FaGithub,
   FaCode,
   FaServer,
+  FaAws,
 } from 'react-icons/fa';
 import { SiJavascript, SiMongodb, SiTailwindcss, SiExpress, SiPython, SiDjango, SiFastapi, SiC, SiFigma, SiPostman } from 'react-icons/si';
 
@@ -29,6 +30,7 @@ const Skills = () => {
     { name: 'FastAPI', Icon: SiFastapi, color: '#009688' },
     { name: 'Git', Icon: FaGitAlt, color: '#f1502f' },
     { name: 'MySQL', Icon: FaDatabase, color: '#336791' },
+    { name: 'AWS', Icon: FaAws, color: '#FF9900' },
     { name: 'C Language', Icon: SiC, color: '#a8b9cc' },
     { name: 'GitHub', Icon: FaGithub, color: '#ffffff' },
     { name: 'VS Code', Icon: FaCode, color: '#007acc' },
