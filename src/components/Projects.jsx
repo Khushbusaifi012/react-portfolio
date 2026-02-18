@@ -37,7 +37,7 @@ const Projects = () => {
       description:  'Modern developer portfolio website with animations and responsive UI.',
       image: '👩‍💻',
       tech: ['ReactJS', 'Tailwind CSS'],
-      github: 'https://github.com',
+      github: 'https://github.com/Khushbusaifi012/react-portfolio',
     },
     {
       id: 5,
