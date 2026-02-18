@@ -54,7 +54,7 @@ const Hero = () => {
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-        className="absolute top-20 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"
+        className="hidden md:block absolute top-20 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"
       />
       <motion.div
         animate={{
@@ -66,17 +66,17 @@ const Hero = () => {
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-        className="absolute bottom-20 left-10 w-72 h-72 bg-pink-500/10 rounded-full blur-3xl"
+        className="hidden md:block absolute bottom-20 left-10 w-72 h-72 bg-pink-500/10 rounded-full blur-3xl"
       />
 
       <motion.div
         variants={container}
         initial="hidden"
         animate="visible"
-        className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-2 gap-4 lg:gap-8 items-center"
+        className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 gap-6 md:gap-8 items-stretch"
       >
         {/* Left: Text Content */}
-        <div className="text-left">
+        <div className="flex flex-col justify-center p-4 text-left">
           {/* Main Heading */}
           <motion.div variants={item} className="mb-4 mt-0">
             <h1 className="text-3xl sm:text-4xl lg:text-7xl font-bold mb-4 lg:mb-6 leading-tight">
@@ -110,41 +110,39 @@ const Hero = () => {
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div variants={item} className="flex flex-col sm:flex-row gap-3 lg:gap-4 mb-8 lg:mb-12 justify-start">
+          <motion.div variants={item} className="flex justify-center md:justify-start mt-4">
             <motion.a
               href="https://drive.google.com/file/d/1iRzwgf3Izqo8grDPhMXpgMlIPZ52HPMJ/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(167, 139, 250, 0.5)' }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-purple text-white text-sm sm:text-base font-bold rounded-lg flex items-center justify-center gap-2 hover:shadow-lg transition-shadow duration-300"
+              className="px-6 sm:px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-lg flex items-center gap-2 shadow-lg"
             >
-              <FaDownload />
-              Download Resume
+              <FaDownload /> Download Resume
             </motion.a>
           </motion.div>
         </div>
 
         {/* Right: Profile Photo */}
-    <motion.div
-  variants={item}
-  className="flex justify-center lg:justify-end items-center"
->
-  <motion.div
-    whileHover={{ scale: 1.05 }}
-    className="relative w-40 h-40 sm:w-56 sm:h-56 lg:w-96 lg:h-96"
-  >
-    <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-2xl opacity-50"></div>
+    <motion.div variants={item} className="flex items-center justify-center">
+      <div className="h-full w-full flex items-center justify-center p-4">
+        <motion.div
+          whileHover={{ scale: 1.03 }}
+          className="relative w-full max-w-[220px] h-[220px] sm:max-w-[260px] sm:h-[260px] md:max-w-[320px] md:h-[320px] lg:w-96 lg:h-96"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-2xl opacity-50"></div>
 
-    <motion.img
-      src="/images/khushbu3.jpg"
-      alt="Khushbu Saifi"
-      className="relative w-full h-full object-cover rounded-full border-4 border-purple-400 shadow-2xl"
-      animate={{ y: [0, 10, 0] }}
-      transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-    />
-  </motion.div>
-</motion.div>
+          <motion.img
+            src="/images/khushbu3.jpg"
+            alt="Khushbu Saifi"
+            className="relative w-full h-full object-cover rounded-full border-4 border-purple-400 shadow-2xl"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+          />
+        </motion.div>
+      </div>
+    </motion.div>
       </motion.div>
     </section>
   );
