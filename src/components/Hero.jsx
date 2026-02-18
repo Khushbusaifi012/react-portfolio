@@ -73,10 +73,10 @@ const Hero = () => {
         variants={container}
         initial="hidden"
         animate="visible"
-        className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 gap-6 md:gap-8 items-stretch"
+        className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch"
       >
         {/* Left: Text Content */}
-        <div className="flex flex-col justify-center p-4 text-left">
+        <div className="flex flex-col justify-center p-4 text-center md:text-left items-center md:items-start order-1">
           {/* Main Heading */}
           <motion.div variants={item} className="mb-4 mt-0">
             <h1 className="text-3xl sm:text-4xl lg:text-7xl font-bold mb-4 lg:mb-6 leading-tight">
@@ -104,13 +104,13 @@ const Hero = () => {
           {/* Description */}
           <motion.p
             variants={item}
-            className="text-sm sm:text-base lg:text-lg text-gray-300 mb-6 lg:mb-10 leading-relaxed"
+            className="text-sm sm:text-base lg:text-lg text-gray-300 mb-6 lg:mb-10 leading-relaxed text-center md:text-left max-w-prose"
           >
             I am Khushbu, a Full Stack Developer skilled in C, Python, ReactJS, Django, and the MERN stack. I also work with HTML, CSS, and JavaScript to build responsive and user-friendly websites. I enjoy problem-solving and coding, and I can handle both frontend and backend development. I am a quick learner, always open to learning new technologies, and actively participate in tech meetups, talks, and workshops to improve my skills.
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div variants={item} className="flex justify-center md:justify-start mt-4">
+          <motion.div variants={item} className="flex justify-center md:justify-start mt-4 w-full">
             <motion.a
               href="https://drive.google.com/file/d/1iRzwgf3Izqo8grDPhMXpgMlIPZ52HPMJ/view?usp=sharing"
               target="_blank"
@@ -125,7 +125,7 @@ const Hero = () => {
         </div>
 
         {/* Right: Profile Photo */}
-    <motion.div variants={item} className="flex items-center justify-center">
+    <motion.div variants={item} className="flex items-center justify-center order-2 md:order-2 mt-6 md:mt-0">
       <div className="h-full w-full flex items-center justify-center p-4">
         <motion.div
           whileHover={{ scale: 1.03 }}
