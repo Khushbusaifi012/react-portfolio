@@ -1,5 +1,3 @@
-# Khushbu Saifi - Modern Developer Portfolio
-
 A modern, premium developer portfolio built with React, Tailwind CSS, and Framer Motion. Features smooth animations, glassmorphism design, and a fully responsive layout.
 
 ## 🚀 Features
