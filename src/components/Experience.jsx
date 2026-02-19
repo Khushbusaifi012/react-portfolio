@@ -34,7 +34,7 @@ const Experience = () => {
       highlights: [
         'Developed and deployed web applications using Flask in Python, delivering web-based solutions.',
         'Built and maintained backend systems using Flask for database management and application development.',
-        'Worked with JSON data structures, HTTP methods (GET, POST, PUT, DELETE), and API request/response cycles.',
+        'Handled API integrations and structured data exchange using JSON, ensuring smooth communication between frontend and backend systems.',
         'Designed and enhanced web interfaces using HTML, CSS, JavaScript, and Bootstrap to create responsive and user-friendly designs.'
       ],
       icon: '🚀',

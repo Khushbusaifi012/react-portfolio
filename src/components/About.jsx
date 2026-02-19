@@ -51,8 +51,7 @@ const About = () => {
               variants={itemVariants}
               className="text-lg text-gray-300 leading-relaxed"
             >
-             Over the past year, I have worked in Full Stack Development, gaining hands-on experience in backend development using Flask and Django (Python), API handling (GET, POST, PUT, DELETE), and database management. I have also built dashboards and web applications using React with Django and Python. On the frontend, I created responsive and user-friendly interfaces using HTML, CSS, JavaScript, Bootstrap, and React.
-            </motion.p>
+            Over the past year, I have worked in Full Stack Development, gaining hands-on experience in backend development using Flask and Django (Python), RESTful API integration, and database management.            </motion.p>
 
             <motion.p
               variants={itemVariants}
