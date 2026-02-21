@@ -76,7 +76,7 @@ const Skills = () => {
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Tools and technologies I work with to build modern, responsive web applications
+            Tools and technologies I work with to build Modern, Responsive Web Applications
           </p>
         </motion.div>
 
