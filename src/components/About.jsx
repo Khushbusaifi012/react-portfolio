@@ -58,14 +58,14 @@ const About = () => {
               className="text-lg text-gray-300 leading-relaxed"
             >
              
-            Recently, I completed a six-month on-site internship as a Full Stack Developer, where I worked extensively with Python, Django, and React. I used Git and GitHub daily for version control and collaboration, and contributed to company-level projects, including frontend development using Elixir.
+            Recently, I completed a six-month on-site Internship as a Full Stack Developer, where I worked extensively with Python, Django, and React. I used Git and GitHub daily for version control and collaboration, and contributed to company-level projects, including frontend development using Elixir.
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-lg text-gray-300 leading-relaxed"
             >
-            I have also completed a Software Development course, where I learned Python, C, and other essential IT skills.
+            I have also completed a Software Development Course, where I learned Python, C, and other Essential IT Skills.
             </motion.p>
           </motion.div>
 
