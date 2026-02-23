@@ -84,5 +84,4 @@ New portfolio/
 └── .gitignore
 ```
 
-This portfolio template is free to use and modify for personal use.
 **Built with ❤️ using React, Tailwind CSS & Framer Motion**
