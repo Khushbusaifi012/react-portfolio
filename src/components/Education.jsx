@@ -9,7 +9,7 @@ const Education = () => {
       field: 'Computer Science',
       institution: 'Chandigarh University',
       period: '2025 - 2027',
-      description: 'Focused on web development, data structures, and software engineering principles.',
+      description: 'Focused on Web Development, Data Structures, and Software Engineering Principles.',
       icon: '🎓',
     },
     {
