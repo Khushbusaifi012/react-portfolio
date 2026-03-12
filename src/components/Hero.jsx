@@ -106,7 +106,7 @@ const Hero = () => {
             variants={item}
             className="text-sm sm:text-base lg:text-lg text-gray-300 mb-6 lg:mb-10 leading-relaxed text-center md:text-left max-w-prose"
           >
-            I am Khushbu, a Full Stack Developer skilled in C, Python, ReactJS, Django, and the MERN stack. I also work with HTML, CSS, and JavaScript to build responsive and user-friendly websites. I enjoy problem-solving and coding, and I can handle both frontend and backend development. I am a quick learner, always open to learning new technologies, and actively participate in tech meetups, talks, and workshops to improve my skills.
+            I am Khushbu, a Full Stack Developer skilled in C, Python, ReactJS, Django, and the MERN Stack. I also work with HTML, CSS, and JavaScript to build responsive and user-friendly websites. I enjoy problem-solving and coding, and I can handle both Frontend and Backend development. I am a quick learner, always open to learning new technologies, and actively participate in tech meetups, talks, and workshops to improve my skills.
           </motion.p>
 
           {/* CTA Buttons */}
