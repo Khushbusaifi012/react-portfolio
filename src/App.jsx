@@ -33,7 +33,7 @@ function App() {
             © 2026 Khushbu Saifi. All rights reserved.
           </p>
           <p className="text-gray-500 text-sm mt-2">
-            Designed & Built with <span className="text-red-500">❤️</span> <span className="text-purple-400">React</span>
+            Designed & Built With <span className="text-red-500">❤️</span> <span className="text-purple-400">React</span>
           </p>
         </div>
       </footer>
