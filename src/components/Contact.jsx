@@ -236,7 +236,7 @@ const Contact = () => {
           className="mt-16 text-center"
         >
           <p className="text-gray-300 mb-6">
-            Prefer direct messaging? Find me on social media:
+            Prefer Direct Messaging? Find Me On Social Media:
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <motion.a
