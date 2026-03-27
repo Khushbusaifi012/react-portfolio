@@ -11,6 +11,8 @@ const Experience = () => {
       highlights: [
         'Contributed to both frontend and backend development using ReactJS and Python.',
         'Build interactive dashboards and data-driven interfaces using Python,React.',
+        'Deployed AI-Powered dashboards on Firebase, Vercel and  Amazon Web Services(EC2) for hosting and access.',
+        'Worked on TripongoStays, designed and improved the user interface for a hotel/property booking platform.'
       ],
       icon: '🚀',
     },
@@ -19,11 +21,11 @@ const Experience = () => {
       company: 'Essentia Softserv',
       period: 'Feb 2025 - July 2025',
       highlights: [
-        'Worked with Python, Django Rest Framework (DRF), and ReactJS.',
-        'Utilized HTML, CSS, and JavaScript for frontend tasks and UI enhancements.',
-        'Developed and optimized APIs, improving system efficiency and response times.',
-        'Learned good experience in database management and application deployment.',
-        'Along with my own projects, I also contributed to company-level projects, especially in frontend development using Elixir language.'
+        'Worked on full-stack development of web applications as a Software Development Intern.',
+        'Developed backend services using Python and Django',
+        'Integrated front-end with back-end services using FASTAPI and DRF.',
+        'Contributed to company-level projects including front-end development using Elixir and Python.',
+        'Deployed and managed company projects on Amazon Web Services (EC2).'
       ],
       icon: '💼',
     },
@@ -32,10 +34,10 @@ const Experience = () => {
       company: 'Reach Love N Heal PVT. LTD',
       period: 'Sep 2024 - Jan 2025',
       highlights: [
-        'Developed and deployed web applications using Flask in Python, delivering web-based solutions.',
-        'Built and maintained backend systems using Flask for database management and application development.',
-        'Handled API integrations and structured data exchange using JSON, ensuring smooth communication between frontend and backend systems.',
-        'Designed and enhanced web interfaces using HTML, CSS, JavaScript, and Bootstrap to create responsive and user-friendly designs.'
+        'Worked on web applications using Flask to build web services.',
+        'Worked on Frontend and Backend using Flask for handling data and application logic.',
+        'Worked with APIs to connect frontend and backend smoothly.',
+        'Created and improved web pages using HTML, CSS, JavaScript, and ReactJS for better user experience'
       ],
       icon: '🚀',
     },

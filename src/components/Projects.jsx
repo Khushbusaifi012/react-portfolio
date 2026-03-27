@@ -16,7 +16,7 @@ const Projects = () => {
     {
       id: 2,
       title: 'The Mental Health App',
-      description: 'Developed during my internship, this is a full-stack mental health web application built using Django (REST API) and ReactJS for individuals to access mental wellness resources and track their mental health.\nImplemented core features like user authentication, Breathing exercise, Journal Entries, CBT Checklist, and Crisis Helpline. Used Django REST Framework (DRF) to build APIs and ReactJS to handle dynamic, responsive UI. Integrated PostgreSQL as the primary database for secure and scalable data storage.\n\nFollowed a modular architecture by separating concerns resources in Django, and component-based structure in React.',
+      description: 'Developed during my internship, this is a full-stack mental health web application built using Django (REST API) and ReactJS for individuals to access mental wellness resources and track their mental health.\nImplemented core features like user authentication, Breathing exercise, Journal Entries, CBT Checklist, and Crisis Helpline. Used Django REST Framework (DRF) to build APIs and ReactJS to handle dynamic, responsive UI. Integrated PostgreSQL as the primary database for secure and scalable data storage.\n\nFollowed a modular architecture by separating concerns resources in Django, and component-based structure in React',
       image: '🧠',
       tech: ['React', 'Django', 'PostgreSQL', 'Tailwind CSS'],
       github: 'https://github.com/Khushbusaifi012/thementalhealthApp',
@@ -34,7 +34,7 @@ const Projects = () => {
     {
       id: 4,
       title: 'Portfolio Website',
-      description:  'Modern developer portfolio website with animations and responsive UI.',
+      description:  'Modern developer portfolio website with animations and responsive UI. Built using ReactJS and Nuxt.js for efficient frontend development. Deployed on Netlify for reliable hosting',
       image: '👩‍💻',
       tech: ['ReactJS', 'Tailwind CSS'],
       github: 'https://github.com/Khushbusaifi012/react-portfolio',
@@ -42,7 +42,7 @@ const Projects = () => {
     {
       id: 5,
       title: 'Loan Management System',
-      description: 'Built a modern Loan Management System dashboard to manage loans, applications, collaterals, and repayments. Developed responsive UI with React and Tailwind CSS and integrated APIs for real-time loan tracking and analytics.',
+      description: 'Built a modern Loan Management System dashboard to manage loans, applications, collaterals, and repayments. Developed responsive UI with React and Tailwind CSS and integrated APIs for real-time loan tracking and analytics',
       image: '💰',
       tech: ['ReactJS', 'Tailwind CSS', 'Django' ,"Django REST Framework", "PostgreSQL"],
       github: 'https://github.com/Khushbusaifi012/fintech-lms',
