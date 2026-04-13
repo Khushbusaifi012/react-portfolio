@@ -24,11 +24,11 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'Weather Forcasting App',
-      description: 'A simple command line app that determines the weather of a place using API. Built a weather report application using Django framework. Integrated OpenWeatherMap API to fetch and display real-time weather based on city input',
+      title: 'Weather Forcasting Dashboard',
+      description: 'A dashboard that determines the weather of a place using API. Built a weather report application using Django framework and React. Integrated OpenWeatherMap API to fetch and display real-time weather based on city input',
       image: '🌤️',
-      tech: ['HTML', 'CSS', 'Javascript', 'OpenWeather API', 'Django'],
-      github: 'https://github.com/Khushbusaifi012/Weather_report',
+      tech: ['React', 'OpenWeather API', 'Django'],
+      github: 'https://github.com/Khushbusaifi012/Weather-Forecast-Dashboard',
       featured: true,
     },
     {
