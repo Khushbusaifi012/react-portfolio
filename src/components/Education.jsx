@@ -6,10 +6,10 @@ const Education = () => {
   const educationData = [
     {
       degree: 'Masters Of Applications',
-      field: 'Computer Science',
+      field: 'Computer Science ,  Artificial Intelligence',
       institution: 'Chandigarh University',
       period: '2025 - 2027',
-      description: 'Focused on Web Development, Data Structures, and Software Engineering Principles.',
+      description: 'Focused on Web Development, Data Structures, Artificial Intelligence and Software Engineering Principles.',
       icon: '🎓',
     },
     {
