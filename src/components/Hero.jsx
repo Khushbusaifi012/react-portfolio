@@ -81,19 +81,19 @@ const Hero = () => {
           <motion.div variants={item} className="mb-4 mt-0">
             <h1 className="text-3xl sm:text-4xl lg:text-7xl font-bold mb-4 lg:mb-6 leading-tight">
               Hey, I'm{' '}
-              <span className="gradient-text">Khushbu Saifi</span>
+              <span className="gradient-text whitespace-nowrap">Khushbu Saifi</span>
             </h1>
           </motion.div>
 
           {/* Typing Animation */}
-          <motion.div variants={item} className="mb-6 lg:mb-8">
-            <div className="text-xl sm:text-2xl lg:text-4xl font-semibold text-purple-400 h-12 lg:h-16 flex items-center justify-start">
-              <span>{displayText}</span>
+          <motion.div variants={item} className="mb-6 lg:mb-8 w-full max-w-full">
+            <div className="flex items-center justify-center md:justify-start text-base sm:text-lg lg:text-xl font-semibold text-purple-400 whitespace-nowrap overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <span className="shrink-0">{displayText}</span>
               {isTyping && (
                 <motion.span
                   animate={{ opacity: [1, 0] }}
                   transition={{ duration: 0.8, repeat: Infinity }}
-                  className="ml-2 text-2xl lg:text-3xl"
+                  className="ml-1.5 shrink-0 inline-block text-current translate-y-px"
                 >
                   |
                 </motion.span>
@@ -134,7 +134,7 @@ const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-2xl opacity-50"></div>
 
           <motion.img
-            src="/images/khushbu3.jpg"
+            src="/images/khushbu4.jpg"
             alt="Khushbu Saifi"
             className="relative w-full h-full object-cover rounded-full border-4 border-purple-400 shadow-2xl"
             animate={{ y: [0, 8, 0] }}

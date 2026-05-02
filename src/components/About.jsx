@@ -69,20 +69,20 @@ const About = () => {
             </motion.p>
           </motion.div>
 
-          {/* Image/Visual Element */}
+          {/* Image/Visual Element — portrait card (reference-style) */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            className="relative flex justify-center"
           >
-            <div className="relative w-full aspect-square">
-              <div className="absolute inset-0 glass-effect rounded-2xl overflow-hidden border border-purple-500/30">
+            <div className="relative w-full max-w-[260px] sm:max-w-[300px] md:max-w-[340px] aspect-[4/5]">
+              <div className="absolute inset-0 glass-effect rounded-3xl overflow-hidden border border-purple-500/40 shadow-2xl shadow-black/50">
                 <img 
                   src="/images/khushbu.jpg" 
                   alt="Khushbu Saifi"
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="w-full h-full object-cover object-center rounded-3xl"
                 />
               </div>
 
@@ -90,14 +90,14 @@ const About = () => {
               <motion.div
                 animate={{ y: [0, -20, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-8 -right-8 w-24 h-24 glass-effect rounded-xl flex items-center justify-center text-3xl border border-purple-500/30"
+                className="absolute -top-6 -right-6 z-10 w-16 h-16 sm:w-[4.5rem] sm:h-[4.5rem] glass-effect rounded-xl flex items-center justify-center text-2xl border border-purple-500/40 bg-gray-900/80 backdrop-blur-md shadow-lg"
               >
                 ⚡
               </motion.div>
               <motion.div
                 animate={{ y: [0, 20, 0] }}
                 transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-                className="absolute -bottom-8 -left-8 w-20 h-20 glass-effect rounded-xl flex items-center justify-center text-2xl border border-purple-500/30"
+                className="absolute -bottom-6 -left-6 z-10 w-14 h-14 sm:w-16 sm:h-16 glass-effect rounded-xl flex items-center justify-center text-xl border border-purple-500/40 bg-gray-900/80 backdrop-blur-md shadow-lg"
               >
                 🚀
               </motion.div>

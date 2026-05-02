@@ -137,9 +137,9 @@ const Skills = () => {
               key={category.title}
               variants={itemVariants}
               whileHover={{ y: -6 }}
-              className="rounded-2xl p-6 border border-cyan-400/50 bg-[#0d1424]/90 shadow-[0_0_24px_rgba(34,211,238,0.08)]"
+              className="glass-effect rounded-xl p-6 border border-purple-500/20 shadow-[0_0_28px_rgba(139,92,246,0.07)] transition-all duration-300 hover:border-purple-400/45 hover:shadow-[0_0_36px_rgba(168,85,247,0.12)]"
             >
-              <h3 className="text-cyan-300 text-sm sm:text-base font-semibold tracking-[0.2em] uppercase mb-5">
+              <h3 className="text-purple-300 text-sm sm:text-base font-semibold tracking-[0.2em] uppercase mb-5">
                 {category.title}
               </h3>
 
@@ -148,10 +148,10 @@ const Skills = () => {
                   <motion.div
                     key={`${category.title}-${skill.name}`}
                     whileHover={{ scale: 1.05 }}
-                    className="min-h-[88px] rounded-xl border border-slate-500/40 bg-slate-900/40 flex flex-col items-center justify-center px-2 py-3 text-center"
+                    className="min-h-[88px] rounded-xl border border-purple-500/15 bg-white/[0.04] hover:bg-purple-500/10 hover:border-purple-400/35 flex flex-col items-center justify-center px-2 py-3 text-center transition-colors duration-300"
                   >
                     <skill.Icon size={26} style={{ color: skill.color }} />
-                    <p className="mt-2 text-xs font-semibold text-slate-100 leading-tight">
+                    <p className="mt-2 text-xs font-semibold text-gray-100 leading-tight">
                       {skill.name}
                     </p>
                   </motion.div>

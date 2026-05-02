@@ -1,13 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaCheck } from 'react-icons/fa';
 
 const Projects = () => {
   const projectsData = [
     {
       id: 1,
       title: 'E-Commerce Platform',
-      description: 'Developed a full-stack eCommerce web application using Django for selling girls clothing products. Implemented features including user registration/login, product catalog, cart, checkout, and admin panel for inventory management. Integrated Django templates for dynamic content rendering and used MYSQL for the database. Followed modular Django architecture with separate apps for user, product, cart, and order management',
+      description:
+        'Developed a full-stack eCommerce web application using Django for selling girls clothing products.\nImplemented features including user registration/login, product catalog, cart, checkout, and admin panel for inventory management.\nIntegrated Django templates for dynamic content rendering and used MYSQL for the database.\nFollowed modular Django architecture with separate apps for user, product, cart, and order management',
       image: '🛍️',
       tech: ['Django', 'HTML', 'MySQL', 'CSS', 'JavaScript'],
       github: 'https://github.com/Khushbusaifi012/E-commerce_store',
@@ -21,33 +22,49 @@ const Projects = () => {
       tech: ['React', 'Django', 'PostgreSQL', 'Tailwind CSS'],
       github: 'https://github.com/Khushbusaifi012/thementalhealthApp',
       featured: true,
+      live: 'https://themind.life/',
     },
     {
       id: 3,
       title: 'Weather Forcasting Dashboard',
-      description: 'A dashboard that determines the weather of a place using API. Built a weather report application using Django framework and React. Integrated OpenWeatherMap API to fetch and display real-time weather based on city input',
+      description:
+        'A dashboard that determines the weather of a place using API.\nBuilt a weather report application using Django and React.\nIntegrated OpenWeatherMap API to fetch and display real-time weather based on city input.',
       image: '🌤️',
       tech: ['React', 'OpenWeather API', 'Django'],
       github: 'https://github.com/Khushbusaifi012/Weather-Forecast-Dashboard',
       featured: true,
+      live: 'https://weather-forecast-dashboard-1-4ig1.onrender.com/',
     },
     {
       id: 4,
-      title: 'Portfolio Website',
-      description: 'Modern developer portfolio website with animations and responsive UI. Built using ReactJS for efficient frontend development. Deployed on Netlify for reliable hosting',
-      image: '👩‍💻',
-      tech: ['ReactJS', 'Tailwind CSS'],
-      github: 'https://github.com/Khushbusaifi012/react-portfolio',
+      title: 'Laundry Order Management System (Mini OMS)',
+      description:
+        'Mini Laundry OMS built with FastAPI and Uvicorn: create orders with customer details, garment line items (quantity & price), automatic totals, and a unique order ID on submit.\nStatuses move through received → processing → ready → delivered, with updates anytime to match real shop workflow.\nView all orders with filtering by customer name, phone, or status.\nDashboard summarizes total orders, revenue, and how many orders sit in each status.\nStatic HTML, CSS, and JavaScript call the REST APIs; Pydantic handles validation with a clean split across routes, models, and business logic.',
+      image: '🧺',
+      tech: ['FastAPI', 'Python', 'PostgreSQL', 'HTML', 'Docker'],
+      github: 'https://github.com/Khushbusaifi012/Laundry-Order-Management-System',
+      live: 'https://laundry-oms-30pm.onrender.com/',
     },
     {
       id: 5,
       title: 'Loan Management System',
-      description: 'Built a modern Loan Management System dashboard to manage loans, applications, collaterals, and repayments. Developed responsive UI with React and Tailwind CSS and integrated APIs for real-time loan tracking and analytics',
+      description:
+        'Built a modern Loan Management System dashboard to manage loans, applications, collaterals, and repayments.\nDeveloped responsive UI with React and Tailwind CSS and integrated APIs for real-time loan tracking and analytics.',
       image: '💰',
       tech: ['ReactJS', 'Tailwind CSS', 'Django' ,"Django REST Framework", "PostgreSQL"],
       github: 'https://github.com/Khushbusaifi012/fintech-lms',
     },
   ];
+
+  const descriptionLines = (description) =>
+    String(description ?? '')
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .filter(
+        (line) =>
+          !/^Deployed version runs with cloud PostgreSQL/i.test(line)
+      );
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -95,84 +112,90 @@ const Projects = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
-          {projectsData.map((project) => (
+          {projectsData.map((project) => {
+            const lines = descriptionLines(project.description);
+            return (
             <motion.div
               key={project.id}
               variants={itemVariants}
-              whileHover={{ y: -8 }}
-              className={`group relative overflow-hidden rounded-xl border border-purple-500/20 hover:border-purple-400/50 transition-all duration-300 ${
+              whileHover={{ y: -4 }}
+              className={`group flex h-full rounded-xl border border-purple-500/20 bg-white/[0.04] p-6 shadow-[0_8px_32px_-12px_rgba(76,29,149,0.35)] backdrop-blur-md transition-all duration-300 hover:border-purple-400/50 hover:shadow-[0_12px_40px_-14px_rgba(168,85,247,0.28)] sm:p-8 ${
                 project.featured
-                  ? 'lg:col-span-1 ring-1 ring-purple-400/50 shadow-[0_12px_40px_-20px_rgba(168,85,247,0.8)]'
+                  ? 'ring-1 ring-purple-400/40 border-purple-400/35 shadow-[0_8px_36px_-10px_rgba(168,85,247,0.35)]'
                   : ''
               }`}
             >
-              {/* Glass Effect Background */}
-              <div className="glass-effect absolute inset-0 opacity-50" />
-
-              {/* Content */}
-              <div className="relative p-6 h-full flex flex-col">
-                {/* Project Image/Icon */}
-                <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="flex h-full min-h-0 w-full flex-col">
+                <div className="mb-2 text-3xl leading-none transition-transform duration-300 group-hover:scale-[1.03] sm:text-4xl">
                   {project.image}
                 </div>
 
-                {/* Project Details */}
-                <h3 className="text-xl font-bold text-white mb-3 leading-snug">
+                <h3
+                  className={`text-xl font-bold leading-snug text-white sm:text-2xl ${lines.length > 0 ? 'mb-3' : 'mb-6'}`}
+                >
                   {project.title}
                 </h3>
 
-                <p className="text-gray-300 mb-6 flex-grow text-sm leading-relaxed">
-                  {project.description}
-                </p>
+                {lines.length > 0 ? (
+                  <ul className="mb-6 flex-grow space-y-2.5 text-sm leading-relaxed text-gray-400">
+                    {lines.map((line, i) => (
+                      <li key={i} className="flex gap-2.5">
+                        <FaCheck
+                          className="mt-0.5 h-3.5 w-3.5 shrink-0 text-purple-400"
+                          aria-hidden
+                        />
+                        <span>{line}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
 
-                {/* Tech Stack */}
-                <div className="mb-6">
+                <div className="mb-6 mt-auto">
+                  <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-purple-400/75">
+                    Technologies
+                  </p>
                   <div className="flex flex-wrap gap-2">
-                    {project.tech.slice(0, 4).map((tech, index) => (
-                      <motion.span
-                        key={index}
-                        whileHover={{ scale: 1.05 }}
-                        className="inline-block px-3 py-1 text-xs font-semibold bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30 hover:border-purple-400 transition-all duration-300"
+                    {project.tech.map((tech, index) => (
+                      <span
+                        key={`${project.id}-${tech}-${index}`}
+                        className="rounded-full border border-purple-500/35 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-200"
                       >
                         {tech}
-                      </motion.span>
-                    ))}
-                    {project.tech.length > 4 && (
-                      <span className="inline-block px-3 py-1 text-xs font-semibold bg-white/5 text-gray-300 rounded-full border border-white/15">
-                        +{project.tech.length - 4} more
                       </span>
-                    )}
+                    ))}
                   </div>
                 </div>
 
-                {/* Links */} 
-                <div className="flex justify-center mt-auto">
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-purple-500/20 pt-5">
                   <motion.a
-                    href={project.github}
+                    href={project.live ?? project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 px-4 py-2 bg-gray-700/50 hover:bg-gray-600 text-white font-semibold rounded-lg transition-all duration-300 border border-gray-600/50 hover:border-gray-500"
+                    whileHover={{ x: 2 }}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-purple-400 transition-colors hover:text-fuchsia-400"
                   >
-                    <FaGithub size={18} />
-                    Code
+                    Open project
+                    <FaExternalLinkAlt className="text-xs opacity-90" aria-hidden />
                   </motion.a>
-
-               
+                  {project.live ? (
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ x: 2 }}
+                      className="inline-flex items-center gap-2 text-xs font-medium text-gray-500 transition-colors hover:text-purple-400"
+                    >
+                      <FaGithub className="text-sm" aria-hidden />
+                      Source
+                    </motion.a>
+                  ) : null}
                 </div>
               </div>
-
-              {/* Hover Overlay */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                className="absolute inset-0 glass-effect border border-purple-400/50 pointer-events-none"
-              />
             </motion.div>
-          ))}
+            );
+          })}
         </motion.div>
 
         {/* View More Button */}
