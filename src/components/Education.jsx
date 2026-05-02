@@ -11,14 +11,8 @@ const Education = () => {
       period: '2025 - 2027',
       description: 'Focused on Web Development, Data Structures, Artificial Intelligence and Software Engineering Principles.',
       icon: '🎓',
-    },
-    {
-      degree: 'Software Development',
-      field: 'Computer Science',
-      institution: 'World Class Skill College',
-      period: '2024 - 2025',
-      description: 'I have expertise in Software Development using C, Python,Django,DRF,React.JS and FastAPI. I have experience working with HTML, CSS, and using the Bootstrap framework. I have experience working with SQL, PostgreSQL, and testing APIs using Postman. I have good experience using Visual Studio Code, GitHub, and Git.',
-      icon: '💻',
+      image: '/images/University.jpg',
+      imageAlt: 'Chandigarh University logo',
     },
   ];
 
@@ -85,7 +79,7 @@ const Education = () => {
                 whileHover={{ y: -5 }}
                 className="glass-effect p-6 rounded-xl border border-purple-500/20 hover:border-purple-400/50 transition-all duration-300"
               >
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-white mb-1">
                       {edu.degree}
@@ -103,7 +97,18 @@ const Education = () => {
                       {edu.description}
                     </p>
                   </div>
-                  <div className="text-4xl">{edu.icon}</div>
+                  <div className="shrink-0 self-center sm:self-start">
+                    {edu.image ? (
+                      <motion.img
+                        src={edu.image}
+                        alt={edu.imageAlt ?? edu.institution}
+                        whileHover={{ scale: 1.03 }}
+                        className="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-xl border border-purple-500/30 bg-white/95 p-1.5 shadow-lg"
+                      />
+                    ) : (
+                      <span className="text-4xl">{edu.icon}</span>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
