@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa';
+import { FaDownload } from 'react-icons/fa';
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
@@ -117,7 +117,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 sm:px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-lg flex items-center gap-2 shadow-lg"
+              className="px-6 sm:px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-xl flex items-center gap-2 shadow-lg shadow-purple-900/30 border border-white/20"
             >
               <FaDownload /> Download Resume
             </motion.a>

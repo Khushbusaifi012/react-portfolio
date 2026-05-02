@@ -1,41 +1,85 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  FaReact,
-  FaNode,
+  FaBootstrap,
+  FaAws,
+  FaCode,
+  FaCss3Alt,
   FaDatabase,
   FaGitAlt,
-  FaHtml5,
-  FaCss3Alt,
   FaGithub,
-  FaCode,
+  FaHtml5,
+  FaNode,
+  FaPython,
+  FaReact,
   FaServer,
-  FaAws,
 } from 'react-icons/fa';
-import { SiJavascript, SiMongodb, SiTailwindcss, SiExpress, SiPython, SiDjango, SiFastapi, SiC, SiFigma, SiPostman } from 'react-icons/si';
+import {
+  SiDjango,
+  SiExpress,
+  SiFastapi,
+  SiFigma,
+  SiJavascript,
+  SiMongodb,
+  SiMysql,
+  SiPostman,
+  SiPostgresql,
+  SiC,
+  SiTailwindcss,
+  SiTypescript,
+} from 'react-icons/si';
 
 const Skills = () => {
-  const iconSkills = [
-    { name: 'React', Icon: FaReact, color: '#61dafb' },
-    { name: 'Node.js', Icon: FaNode, color: '#68a063' },
-    { name: 'JavaScript', Icon: SiJavascript, color: '#f7df1e' },
-    { name: 'MongoDB', Icon: SiMongodb, color: '#13aa52' },
-    { name: 'Express', Icon: SiExpress, color: '#ffffff' },
-    { name: 'Tailwind CSS', Icon: SiTailwindcss, color: '#06b6d4' },
-    { name: 'HTML5', Icon: FaHtml5, color: '#e34c26' },
-    { name: 'CSS3', Icon: FaCss3Alt, color: '#563d7c' },
-    { name: 'Python', Icon: SiPython, color: '#87ceeb' },
-    { name: 'Django', Icon: SiDjango, color: '#092e20' },
-    { name: 'Django REST Framework', Icon: FaServer, color: '#a30000' },
-    { name: 'FastAPI', Icon: SiFastapi, color: '#009688' },
-    { name: 'Git', Icon: FaGitAlt, color: '#f1502f' },
-    { name: 'MySQL', Icon: FaDatabase, color: '#336791' },
-    { name: 'AWS', Icon: FaAws, color: '#FF9900' },
-    { name: 'C Language', Icon: SiC, color: '#a8b9cc' },
-    { name: 'GitHub', Icon: FaGithub, color: '#ffffff' },
-    { name: 'VS Code', Icon: FaCode, color: '#007acc' },
-    { name: 'Figma', Icon: SiFigma, color: '#2563eb' },
-    { name: 'Postman', Icon: SiPostman, color: '#ff6c37' },
+  const skillCategories = [
+    {
+      title: 'Frontend Languages',
+      skills: [
+        { name: 'HTML5', Icon: FaHtml5, color: '#ff6d3a' },
+        { name: 'CSS3', Icon: FaCss3Alt, color: '#2ea8ff' },
+        { name: 'JavaScript', Icon: SiJavascript, color: '#ffd54a' },
+        { name: 'TypeScript', Icon: SiTypescript, color: '#3b82f6' },
+        { name: 'React', Icon: FaReact, color: '#61dafb' },
+        { name: 'Tailwind', Icon: SiTailwindcss, color: '#22d3ee' },
+        { name: 'Bootstrap', Icon: FaBootstrap, color: '#a855f7' },
+      ],
+    },
+    {
+      title: 'Backend Languages & Frameworks',
+      skills: [
+        { name: 'Python', Icon: FaPython, color: '#60a5fa' },
+        { name: 'C Language', Icon: SiC, color: '#a8b9cc' },
+        { name: 'Node.js', Icon: FaNode, color: '#76b657' },
+        { name: 'Django', Icon: SiDjango, color: '#5eead4' },
+        { name: 'Express', Icon: SiExpress, color: '#d1d5db' },
+        { name: 'Django REST', Icon: FaServer, color: '#f97316' },
+        { name: 'FastAPI', Icon: SiFastapi, color: '#14b8a6' },
+      ],
+    },
+    {
+      title: 'Database',
+      skills: [
+        { name: 'MySQL', Icon: SiMysql, color: '#60a5fa' },
+        { name: 'PostgreSQL', Icon: SiPostgresql, color: '#38bdf8' },
+        { name: 'MongoDB', Icon: SiMongodb, color: '#22c55e' },
+        { name: 'SQL', Icon: FaDatabase, color: '#cbd5e1' },
+      ],
+    },
+    {
+      title: 'Tools',
+      skills: [
+        { name: 'Git', Icon: FaGitAlt, color: '#f97316' },
+        { name: 'GitHub', Icon: FaGithub, color: '#e5e7eb' },
+        { name: 'VS Code', Icon: FaCode, color: '#3b82f6' },
+        { name: 'Figma', Icon: SiFigma, color: '#a855f7' },
+        { name: 'Postman', Icon: SiPostman, color: '#f97316' },
+      ],
+    },
+    {
+      title: 'Cloud & DevOps',
+      skills: [
+        { name: 'AWS', Icon: FaAws, color: '#f59e0b' },
+      ],
+    },
   ];
 
   const containerVariants = {
@@ -80,35 +124,39 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        {/* Icon Grid */}
+        {/* Skills Boxes */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-20"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20"
         >
-          {iconSkills.map((skill, index) => (
+          {skillCategories.map((category) => (
             <motion.div
-              key={index}
+              key={category.title}
               variants={itemVariants}
-              whileHover={{ scale: 1.1, y: -10 }}
-              className="glass rounded-xl p-6 flex flex-col items-center justify-center cursor-pointer group border border-purple-primary/20 hover:border-purple-primary/50 transition-all"
+              whileHover={{ y: -6 }}
+              className="rounded-2xl p-6 border border-cyan-400/50 bg-[#0d1424]/90 shadow-[0_0_24px_rgba(34,211,238,0.08)]"
             >
-              <motion.div
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
-                className="mb-4"
-              >
-                <skill.Icon
-                  size={48}
-                  style={{ color: skill.color }}
-                  className="group-hover:filter group-hover:drop-shadow-lg transition-all"
-                />
-              </motion.div>
-              <h3 className="text-center font-semibold text-gray-200 group-hover:text-purple-secondary transition-colors">
-                {skill.name}
+              <h3 className="text-cyan-300 text-sm sm:text-base font-semibold tracking-[0.2em] uppercase mb-5">
+                {category.title}
               </h3>
+
+              <div className="grid grid-cols-3 gap-3">
+                {category.skills.map((skill) => (
+                  <motion.div
+                    key={`${category.title}-${skill.name}`}
+                    whileHover={{ scale: 1.05 }}
+                    className="min-h-[88px] rounded-xl border border-slate-500/40 bg-slate-900/40 flex flex-col items-center justify-center px-2 py-3 text-center"
+                  >
+                    <skill.Icon size={26} style={{ color: skill.color }} />
+                    <p className="mt-2 text-xs font-semibold text-slate-100 leading-tight">
+                      {skill.name}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           ))}
         </motion.div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 
 const Projects = () => {
   const projectsData = [
@@ -34,7 +34,7 @@ const Projects = () => {
     {
       id: 4,
       title: 'Portfolio Website',
-      description:  'Modern developer portfolio website with animations and responsive UI. Built using ReactJS and Nuxt.js for efficient frontend development. Deployed on Netlify for reliable hosting',
+      description: 'Modern developer portfolio website with animations and responsive UI. Built using ReactJS for efficient frontend development. Deployed on Netlify for reliable hosting',
       image: '👩‍💻',
       tech: ['ReactJS', 'Tailwind CSS'],
       github: 'https://github.com/Khushbusaifi012/react-portfolio',
@@ -95,15 +95,16 @@ const Projects = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {projectsData.map((project) => (
             <motion.div
               key={project.id}
               variants={itemVariants}
+              whileHover={{ y: -8 }}
               className={`group relative overflow-hidden rounded-xl border border-purple-500/20 hover:border-purple-400/50 transition-all duration-300 ${
                 project.featured
-                  ? 'lg:col-span-1 ring-2 ring-purple-500/50'
+                  ? 'lg:col-span-1 ring-1 ring-purple-400/50 shadow-[0_12px_40px_-20px_rgba(168,85,247,0.8)]'
                   : ''
               }`}
             >
@@ -118,22 +119,18 @@ const Projects = () => {
                 </div>
 
                 {/* Project Details */}
-                <h3 className="text-2xl font-bold text-white mb-3">
+                <h3 className="text-xl font-bold text-white mb-3 leading-snug">
                   {project.title}
                 </h3>
 
-               <p className="text-gray-300 mb-6 flex-grow">
-              {project.description.split('. ').map((line, i) => (
-              <span key={i} className="block">
-              {line}.
-              </span>
-  ))}
-</p>
+                <p className="text-gray-300 mb-6 flex-grow text-sm leading-relaxed">
+                  {project.description}
+                </p>
 
                 {/* Tech Stack */}
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, index) => (
+                    {project.tech.slice(0, 4).map((tech, index) => (
                       <motion.span
                         key={index}
                         whileHover={{ scale: 1.05 }}
@@ -142,6 +139,11 @@ const Projects = () => {
                         {tech}
                       </motion.span>
                     ))}
+                    {project.tech.length > 4 && (
+                      <span className="inline-block px-3 py-1 text-xs font-semibold bg-white/5 text-gray-300 rounded-full border border-white/15">
+                        +{project.tech.length - 4} more
+                      </span>
+                    )}
                   </div>
                 </div>
 
