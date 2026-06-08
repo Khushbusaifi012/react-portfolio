@@ -6,42 +6,32 @@ const Projects = () => {
   const projectsData = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description:
-        'Developed a full-stack eCommerce web application using Django for selling girls clothing products.\nImplemented features including user registration/login, product catalog, cart, checkout, and admin panel for inventory management.\nIntegrated Django templates for dynamic content rendering and used MYSQL for the database.\nFollowed modular Django architecture with separate apps for user, product, cart, and order management',
-      image: '🛍️',
-      tech: ['Django', 'HTML', 'MySQL', 'CSS', 'JavaScript'],
-      github: 'https://github.com/Khushbusaifi012/E-commerce_store',
-      featured: true,
-    },
-    {
-      id: 2,
       title: 'The Mental Health App',
       description: 'Developed during my internship, this is a full-stack mental health web application built using Django (REST API) and ReactJS for individuals to access mental wellness resources and track their mental health.\nImplemented core features like user authentication, Breathing exercise, Journal Entries, CBT Checklist, and Crisis Helpline. Used Django REST Framework (DRF) to build APIs and ReactJS to handle dynamic, responsive UI. Integrated PostgreSQL as the primary database for secure and scalable data storage.\n\nFollowed a modular architecture by separating concerns resources in Django, and component-based structure in React',
       image: '🧠',
       tech: ['React', 'Django', 'PostgreSQL', 'Tailwind CSS'],
-      github: 'https://github.com/Khushbusaifi012/thementalhealthApp',
+      github: 'https://github.com/Khushbusaifi012/The-Mental-health-App',
       featured: true,
       live: 'https://themind.life/',
     },
     {
-      id: 3,
-      title: 'Laundry Order Management System (Mini OMS)',
-      description:
-        'Mini Laundry OMS built with FastAPI and Uvicorn: create orders with customer details, garment line items (quantity & price), automatic totals, and a unique order ID on submit.\nStatuses move through received → processing → ready → delivered, with updates anytime to match real shop workflow.\nView all orders with filtering by customer name, phone, or status.\nDashboard summarizes total orders, revenue, and how many orders sit in each status.\nStatic HTML, CSS, and JavaScript call the REST APIs; Pydantic handles validation with a clean split across routes, models, and business logic.',
-      image: '🧺',
-      tech: ['FastAPI', 'Python', 'PostgreSQL', 'HTML', 'Docker'],
-      github: 'https://github.com/Khushbusaifi012/Laundry-Order-Management-System',
-      live: 'https://laundry-oms-30pm.onrender.com/',
-    },
-    {
-      id: 4,
+      id: 2,
       title: 'Loan Management System',
       description:
-        'Built a modern Loan Management System dashboard to manage loans, applications, collaterals, and repayments.\nDeveloped responsive UI with React and Tailwind CSS and integrated APIs for real-time loan tracking and analytics.',
+        'Built a modern Loan Management System dashboard to manage loans, applications, collaterals, and repayments.\nDeveloped responsive UI with React and Tailwind CSS and integrated APIs for real-time loan tracking and analytics.\nDesigned Django REST Framework backend for loan products, KYC applications, mutual fund collateral pledges, LTV-based eligibility, and approve/close workflows with PostgreSQL.',
       image: '💰',
       tech: ['ReactJS', 'Tailwind CSS', 'Django' ,"Django REST Framework", "PostgreSQL"],
       github: 'https://github.com/Khushbusaifi012/fintech-lms',
+    },
+    {
+      id: 3,
+      title: 'AI Resume Finalizer & ATS Optimizer',
+      description:
+        'Built a Next.js app to upload resumes (PDF or DOCX), parse text, and score ATS compatibility across formatting, structure, keywords, and content quality.\nAdded job description matching to surface missing keywords and improve role-specific alignment.\nIntegrated OpenAI API for AI-powered bullet rewrites and section improvements with a responsive dark-theme UI.',
+      image: '📄',
+      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'OpenAI API'],
+      github: 'https://github.com/Khushbusaifi012/AI-Resume-Finalizer-and-Ats-optimizer',
+      live: 'https://ai-resume-finalizer-and-ats-optimiz.vercel.app/',
     },
   ];
 
