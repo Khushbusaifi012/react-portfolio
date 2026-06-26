@@ -112,7 +112,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <motion.div variants={item} className="flex justify-center md:justify-start mt-4 w-full">
             <motion.a
-              href="https://drive.google.com/file/d/1NN4V5Gr4xBjs6UJUGe-Nk7F3kB_rL-cs/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Tmv93pM4onbH7Dvojqd7D7pW8j0NbU1B/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
