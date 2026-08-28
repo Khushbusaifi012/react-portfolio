@@ -49,7 +49,7 @@ const Education = () => {
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             <span className="gradient-text">Education</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-purple mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-teal mx-auto rounded-full"></div>
         </motion.div>
 
         {/* Timeline */}
@@ -64,12 +64,12 @@ const Education = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="relative pl-8 border-l-2 border-purple-500/50 hover:border-purple-400 transition-colors duration-300"
+              className="relative pl-8 border-l-2 border-teal-500/50 hover:border-teal-400 transition-colors duration-300"
             >
               {/* Timeline dot */}
               <motion.div
                 whileHover={{ scale: 1.2 }}
-                className="absolute -left-4 top-0 w-8 h-8 bg-gradient-purple rounded-full flex items-center justify-center border-4 border-secondary"
+                className="absolute -left-4 top-0 w-8 h-8 bg-gradient-teal rounded-full flex items-center justify-center border-4 border-secondary"
               >
                 <FaGraduationCap className="text-white text-sm" />
               </motion.div>
@@ -77,14 +77,14 @@ const Education = () => {
               {/* Card */}
               <motion.div
                 whileHover={{ y: -5 }}
-                className="glass-effect p-6 rounded-xl border border-purple-500/20 hover:border-purple-400/50 transition-all duration-300"
+                className="glass-effect p-6 rounded-xl border border-teal-500/20 hover:border-teal-400/50 transition-all duration-300"
               >
                 <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-white mb-1">
                       {edu.degree}
                     </h3>
-                    <p className="text-lg text-purple-400 font-semibold mb-2">
+                    <p className="text-lg text-teal-400 font-semibold mb-2">
                       {edu.field}
                     </p>
                     <p className="text-gray-300 mb-3">
@@ -103,7 +103,7 @@ const Education = () => {
                         src={edu.image}
                         alt={edu.imageAlt ?? edu.institution}
                         whileHover={{ scale: 1.03 }}
-                        className="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-xl border border-purple-500/30 bg-white/95 p-1.5 shadow-lg"
+                        className="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-xl border border-teal-500/30 bg-white/95 p-1.5 shadow-lg"
                       />
                     ) : (
                       <span className="text-4xl">{edu.icon}</span>

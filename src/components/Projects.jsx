@@ -78,7 +78,7 @@ const Projects = () => {
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-purple mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-teal mx-auto rounded-full"></div>
           <p className="text-gray-300 mt-6 max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and creativity.
             Each project represents a unique challenge and learning opportunity.
@@ -100,9 +100,9 @@ const Projects = () => {
               key={project.id}
               variants={itemVariants}
               whileHover={{ y: -4 }}
-              className={`group flex h-full rounded-xl border border-purple-500/15 bg-secondary p-6 shadow-lg shadow-black/20 transition-all duration-300 hover:border-purple-400/35 hover:shadow-[0_12px_40px_-16px_rgba(139,92,246,0.18)] sm:p-7 ${
+              className={`group flex h-full rounded-xl border border-teal-500/15 bg-secondary p-6 shadow-lg shadow-black/20 transition-all duration-300 hover:border-teal-400/35 hover:shadow-[0_12px_40px_-16px_rgba(45,212,191,0.18)] sm:p-7 ${
                 project.featured
-                  ? 'ring-1 ring-purple-500/30 border-purple-400/25 shadow-[0_8px_40px_-12px_rgba(139,92,246,0.2)]'
+                  ? 'ring-1 ring-teal-500/30 border-teal-400/25 shadow-[0_8px_40px_-12px_rgba(45,212,191,0.2)]'
                   : ''
               }`}
             >
@@ -122,7 +122,7 @@ const Projects = () => {
                     {lines.map((line, i) => (
                       <li key={i} className="flex gap-2.5">
                         <FaCheck
-                          className="mt-0.5 h-3.5 w-3.5 shrink-0 text-purple-400/95"
+                          className="mt-0.5 h-3.5 w-3.5 shrink-0 text-teal-400/95"
                           aria-hidden
                         />
                         <span>{line}</span>
@@ -139,7 +139,7 @@ const Projects = () => {
                     {project.tech.map((tech, index) => (
                       <span
                         key={`${project.id}-${tech}-${index}`}
-                        className="rounded-full border border-purple-500/25 bg-primary/90 px-3 py-1 text-xs font-medium text-purple-200"
+                        className="rounded-full border border-teal-500/25 bg-primary/90 px-3 py-1 text-xs font-medium text-teal-200"
                       >
                         {tech}
                       </span>
@@ -147,13 +147,13 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-purple-500/15 pt-5">
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-teal-500/15 pt-5">
                   <motion.a
                     href={project.live ?? project.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ x: 2 }}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-purple-400 transition-colors hover:text-purple-300"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-teal-400 transition-colors hover:text-teal-300"
                   >
                     Open project
                     <FaExternalLinkAlt className="text-xs opacity-90" aria-hidden />
@@ -164,7 +164,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ x: 2 }}
-                      className="inline-flex items-center gap-2 text-xs font-medium text-gray-500 transition-colors hover:text-purple-400"
+                      className="inline-flex items-center gap-2 text-xs font-medium text-gray-500 transition-colors hover:text-teal-400"
                     >
                       <FaGithub className="text-sm" aria-hidden />
                       Source
@@ -189,9 +189,9 @@ const Projects = () => {
             href="https://github.com/khushbusaifi012"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(167, 139, 250, 0.5)' }}
+            whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(45, 212, 191, 0.5)' }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-purple text-white font-bold rounded-lg hover:shadow-lg transition-shadow duration-300"
+            className="px-8 py-4 bg-teal-400 text-[#0b0e14] font-bold rounded-lg hover:shadow-glow-teal transition-shadow duration-300"
           >
             View More Projects on GitHub
           </motion.a>

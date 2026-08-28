@@ -27,13 +27,13 @@ function App() {
       <Contact />
       
       {/* Footer */}
-      <footer className="bg-black/50 backdrop-blur-md border-t border-purple-500/20 py-8">
+      <footer className="bg-black/50 backdrop-blur-md border-t border-teal-500/20 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400">
             © 2026 Khushbu Saifi. All rights reserved.
           </p>
           <p className="text-gray-500 text-sm mt-2">
-            Designed & Built With <span className="text-red-500">❤️</span> <span className="text-purple-400">React</span>
+            Designed & Built With <span className="text-red-500">❤️</span> <span className="text-teal-400">React</span>
           </p>
         </div>
       </footer>

@@ -6,21 +6,21 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #0f0f1e 100%);
+  font-family: 'Poppins', sans-serif;
+  background: #0b0e14;
   color: white;
 }
 
 /* Glassmorphism Effect */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(17, 22, 32, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(45, 212, 191, 0.08);
 }
 
 .glass-effect-hover:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(167, 139, 250, 0.3);
+  background: rgba(22, 27, 38, 0.8);
+  border-color: rgba(45, 212, 191, 0.25);
   transition: all 0.3s ease;
 }
 
@@ -35,22 +35,22 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #a78bfa 0%, #9368e3 100%);
+  background: linear-gradient(180deg, #2dd4bf 0%, #14b8a6 100%);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #9368e3 0%, #8851d1 100%);
+  background: linear-gradient(180deg, #5eead4 0%, #2dd4bf 100%);
 }
 
 /* Selection Color */
 ::selection {
-  background: rgba(167, 139, 250, 0.3);
-  color: #a78bfa;
+  background: rgba(45, 212, 191, 0.25);
+  color: #5eead4;
 }
 
 /* Fade-in Animation */
@@ -69,9 +69,9 @@ html {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* Gradient Text */
+/* Section heading accent — teal */
 .gradient-text {
-  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+  background: linear-gradient(135deg, #2dd4bf 0%, #5eead4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -84,9 +84,15 @@ html {
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.7);
+    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.6);
   }
   50% {
-    box-shadow: 0 0 0 10px rgba(167, 139, 250, 0);
+    box-shadow: 0 0 0 10px rgba(45, 212, 191, 0);
   }
 }
+
+/* Neon border glow for photos */
+.neon-border-teal {
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.4), inset 0 0 20px rgba(45, 212, 191, 0.05);
+}
+
