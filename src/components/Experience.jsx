@@ -7,7 +7,7 @@ const Experience = () => {
     {
       position: 'Software Developer',
       company: 'Kliff Technologies',
-      location: 'India',
+      location: ' New Delhi',
       periodDisplay: 'Jul 2026 — Present',
       logo: '/images/Kliff.png',
       logoClass: 'bg-white',
@@ -86,14 +86,14 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section id="experience" className="-mt-2 pt-2 pb-12 md:pt-4 md:pb-16 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-12"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             Work <span className="gradient-text">Experience</span>

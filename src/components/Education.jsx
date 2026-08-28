@@ -36,7 +36,7 @@ const Education = () => {
   };
 
   return (
-    <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section id="education" className="-mt-2 pt-2 pb-12 md:pt-4 md:pb-16 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -44,7 +44,7 @@ const Education = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-12"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             <span className="gradient-text">Education</span>

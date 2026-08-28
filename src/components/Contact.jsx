@@ -35,14 +35,14 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section id="contact" className="-mt-4 pt-0 pb-12 md:pt-2 md:pb-16 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-12"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             Get In <span className="gradient-text">Touch</span>
@@ -85,7 +85,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-16 text-center"
+          className="mt-10 text-center"
         >
           <p className="text-gray-300 mb-6">
             Prefer Direct Messaging? Find Me On Social Media:

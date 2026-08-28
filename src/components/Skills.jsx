@@ -97,7 +97,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-dark relative overflow-hidden">
+    <section id="skills" className="-mt-2 pt-2 pb-8 md:pt-4 md:pb-10 px-4 sm:px-6 lg:px-8 bg-gradient-dark relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-teal-400/10 rounded-full blur-3xl"></div>
 
@@ -107,7 +107,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="gradient-text">
@@ -125,7 +125,7 @@ const Skills = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"
         >
           {skillCategories.map((category) => (
             <motion.div

@@ -65,7 +65,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section id="projects" className="-mt-4 pt-0 pb-10 md:pt-2 md:pb-12 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -73,7 +73,7 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-12"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             Featured <span className="gradient-text">Projects</span>
@@ -183,7 +183,7 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex justify-center mt-16"
+          className="flex justify-center mt-10"
         >
           <motion.a
             href="https://github.com/khushbusaifi012"
