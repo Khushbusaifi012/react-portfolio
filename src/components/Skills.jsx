@@ -97,7 +97,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="-mt-2 pt-2 pb-8 md:pt-4 md:pb-10 px-4 sm:px-6 lg:px-8 bg-gradient-dark relative overflow-hidden">
+    <section id="skills" className="pt-6 pb-8 md:pt-8 md:pb-10 px-4 sm:px-6 lg:px-8 bg-gradient-dark relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-teal-400/10 rounded-full blur-3xl"></div>
 

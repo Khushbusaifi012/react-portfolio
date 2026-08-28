@@ -25,13 +25,21 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'AI Resume Finalizer & ATS Optimizer',
+      title: 'Homestays of India',
       description:
-        'Built a Next.js app to upload resumes (PDF or DOCX), parse text, and score ATS compatibility across formatting, structure, keywords, and content quality.\nAdded job description matching to surface missing keywords and improve role-specific alignment.\nIntegrated OpenAI API for AI-powered bullet rewrites and section improvements with a responsive dark-theme UI.',
-      image: '📄',
-      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'OpenAI API'],
-      github: 'https://github.com/Khushbusaifi012/AI-Resume-Finalizer-and-Ats-optimizer',
-      live: 'https://ai-resume-finalizer-and-ats-optimiz.vercel.app/',
+        'Contributed extensively to Homestays of India, a full-stack homestay booking platform for discovering and booking stays across India.\nBuilt and enhanced responsive frontend features including location-based search, date and guest selection, user login, wishlists, and dark mode UI.\nDeveloped backend functionality, API integrations, and database-driven features to support homestay listings, search workflows, and live website updates.\nWorked across the complete development process from frontend pages and UI improvements to backend logic.',
+      image: '🏠',
+      tech: ['Next.js', 'PHP', 'MySQL', 'Laravel'],
+      live: 'https://test.homestaysofindia.com/',
+    },
+    {
+      id: 4,
+      title: 'Ebuild Bazaar Platforms',
+      description:
+        'Built Ebuild Bazaar Platforms, an eCommerce website for construction materials, renovation products, interior design, and professional home services across India.\nDesigned a Blinkit-inspired, mobile-first UI with fast browsing, category-based product discovery, trending picks, and quick-order style flows adapted for the building products marketplace.\nDeveloped full-stack features including shop sections, services (construction management, design, renovation, labour hire), project showcases, and enquiry/callback workflows.',
+      image: '🏗️',
+      tech: ['Next.js', 'PHP', 'MySQL', 'Laravel'],
+      live: 'https://stagedev.ebuildbazaar.in/',
     },
   ];
 
@@ -65,7 +73,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="-mt-4 pt-0 pb-10 md:pt-2 md:pb-12 px-4 sm:px-6 lg:px-8 relative">
+    <section id="projects" className="pt-4 pb-10 md:pt-6 md:pb-12 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -158,7 +166,7 @@ const Projects = () => {
                     Open project
                     <FaExternalLinkAlt className="text-xs opacity-90" aria-hidden />
                   </motion.a>
-                  {project.live ? (
+                  {project.github ? (
                     <motion.a
                       href={project.github}
                       target="_blank"
