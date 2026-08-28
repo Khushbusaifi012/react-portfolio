@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaDownload } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
@@ -120,14 +121,26 @@ const Hero = () => {
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div variants={item} className="flex justify-center md:justify-start mt-4 w-full">
+          <motion.div
+            variants={item}
+            className="flex flex-wrap justify-center md:justify-start gap-4 mt-4 w-full"
+          >
+            <Link to="projects" smooth duration={500} offset={-70} className="cursor-pointer">
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex px-6 sm:px-8 py-3 rounded-xl font-bold border-2 border-teal-400 text-teal-400 hover:bg-teal-400/10 transition-colors"
+              >
+                View Projects
+              </motion.span>
+            </Link>
             <motion.a
               href="https://drive.google.com/file/d/1Rd_Xl1DNVBccrb7nOvjUyFXMHZuO9yGb/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 sm:px-8 py-3 bg-teal-400 text-[#0b0e14] font-bold rounded-xl flex items-center gap-2 shadow-lg shadow-teal-900/40 hover:shadow-glow-teal transition-shadow"
+              className="px-6 sm:px-8 py-3 bg-teal-400 text-[#0b0e14] font-bold rounded-xl inline-flex items-center gap-2 shadow-lg shadow-teal-900/40 hover:shadow-glow-teal transition-shadow"
             >
               <FaDownload /> Download Resume
             </motion.a>

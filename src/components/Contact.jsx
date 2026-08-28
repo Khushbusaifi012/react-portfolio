@@ -20,7 +20,7 @@ const Contact = () => {
     {
       icon: FaMapMarkerAlt,
       title: 'Location',
-      value: 'India',
+      value: 'New Delhi, India',
       href: '#',
     },
   ];
@@ -54,7 +54,7 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {contactInfo.map((info, index) => (
             <motion.a
               key={index}
@@ -85,7 +85,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-10 text-center"
+          className="text-center"
         >
           <p className="text-gray-300 mb-6">
             Prefer Direct Messaging? Find Me On Social Media:
