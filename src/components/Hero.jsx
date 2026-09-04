@@ -135,7 +135,7 @@ const Hero = () => {
               </motion.span>
             </Link>
             <motion.a
-              href="https://drive.google.com/file/d/1Rd_Xl1DNVBccrb7nOvjUyFXMHZuO9yGb/view?usp=sharing"
+              href="https://drive.google.com/file/d/1JIucB-4BYeb2vGOursp7E5uQ_LJxoe2W/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
