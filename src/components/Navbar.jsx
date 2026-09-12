@@ -78,7 +78,7 @@ const Navbar = () => {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             className={`flex items-center justify-between transition-all duration-300 ${
-              scrolled ? 'h-14' : 'h-16'
+              scrolled ? 'min-h-14 py-3' : 'min-h-16 py-3.5'
             }`}
           >
             <Link
@@ -86,17 +86,23 @@ const Navbar = () => {
               smooth
               duration={500}
               offset={-70}
-              className="group flex items-center gap-2.5 cursor-pointer"
+              className="group flex items-center gap-1 cursor-pointer"
               aria-label="Scroll to top"
             >
-              <motion.div
+              <motion.span
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-teal-400/40 bg-teal-400 shadow-[0_0_16px_rgba(45,212,191,0.35)]"
+                whileTap={{ scale: 0.97 }}
+                className={`inline-flex items-center justify-center overflow-hidden ${
+                  scrolled ? 'h-9 w-9 sm:h-10 sm:w-10' : 'h-10 w-10 sm:h-11 sm:w-11'
+                }`}
               >
-                <span className="text-sm font-bold text-[#0b0e14]">KS</span>
-              </motion.div>
-              <span className="hidden sm:inline text-lg font-bold text-white">
+                <img
+                  src="/images/logo-mark.png?v=3"
+                  alt="KS"
+                  className="max-h-[78%] max-w-[78%] object-contain"
+                />
+              </motion.span>
+              <span className="hidden sm:inline text-lg font-bold leading-none text-white group-hover:text-teal-200 transition-colors">
                 Khushbu
               </span>
             </Link>
