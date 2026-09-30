@@ -78,6 +78,13 @@ const Hero = () => {
       >
         {/* Left: Text Content */}
         <div className="flex flex-col justify-start p-4 text-center md:text-left items-center md:items-start order-1">
+          <motion.div variants={item} className="mb-4">
+            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold tracking-wide text-emerald-300">
+              <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden />
+              Open to Work
+            </span>
+          </motion.div>
+
           {/* Main Heading */}
           <motion.div variants={item} className="mb-4 mt-0">
             <h1 className="text-2xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold mb-4 lg:mb-6 leading-tight text-white whitespace-nowrap">
@@ -145,6 +152,27 @@ const Hero = () => {
               <FaDownload /> Download Resume
             </motion.a>
           </motion.div>
+
+          <motion.div
+            variants={item}
+            className="mt-8 grid w-full max-w-md grid-cols-3 gap-3"
+          >
+            {[
+              ['2+', 'Years'],
+              ['4', 'Companies'],
+              ['4', 'Projects'],
+            ].map(([value, label]) => (
+              <div
+                key={label}
+                className="rounded-xl border border-teal-500/20 bg-white/[0.03] px-2 py-3 text-center"
+              >
+                <p className="text-xl font-bold text-white sm:text-2xl">{value}</p>
+                <p className="mt-1 text-[11px] font-medium uppercase tracking-wider text-gray-400">
+                  {label}
+                </p>
+              </div>
+            ))}
+          </motion.div>
         </div>
 
         {/* Right: Profile Photo — aligned with "Software Developer" */}
@@ -160,7 +188,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-teal-400/50 via-teal-500/30 to-teal-600/20 rounded-2xl blur-2xl opacity-70"></div>
 
               <motion.img
-                src="/images/khushbu4.jpg"
+                src="/images/khushbu4.webp"
                 alt="Khushbu Saifi"
                 className="relative w-full h-auto object-cover rounded-2xl border-2 border-teal-400/60 shadow-glow-teal neon-border-teal"
                 animate={{ y: [0, 8, 0] }}

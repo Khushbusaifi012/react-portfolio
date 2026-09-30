@@ -1,14 +1,19 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaCheck } from 'react-icons/fa';
 
+const filters = ['All', 'React', 'Next.js'];
+
 const Projects = () => {
+  const [activeFilter, setActiveFilter] = useState('All');
+
   const projectsData = [
     {
       id: 1,
       title: 'The Mental Health App',
       description: 'Developed during my internship, this is a full-stack mental health web application built using Django (REST API) and ReactJS for individuals to access mental wellness resources and track their mental health.\nImplemented core features like user authentication, Breathing exercise, Journal Entries, CBT Checklist, and Crisis Helpline. Used Django REST Framework (DRF) to build APIs and ReactJS to handle dynamic, responsive UI. Integrated PostgreSQL as the primary database for secure and scalable data storage.\n\nFollowed a modular architecture by separating concerns resources in Django, and component-based structure in React',
-      image: '🧠',
+      category: 'React',
+      cover: 'from-violet-500/35 via-slate-900 to-slate-950',
       tech: ['React', 'Django', 'PostgreSQL', 'Tailwind CSS'],
       github: 'https://github.com/Khushbusaifi012/The-Mental-health-App',
       featured: true,
@@ -19,7 +24,8 @@ const Projects = () => {
       title: 'Loan Management System',
       description:
         'Built a modern Loan Management System dashboard to manage loans, applications, collaterals, and repayments.\nDeveloped responsive UI with React and Tailwind CSS and integrated APIs for real-time loan tracking and analytics.\nDesigned Django REST Framework backend for loan products, KYC applications, mutual fund collateral pledges, LTV-based eligibility, and approve/close workflows with PostgreSQL.',
-      image: '💰',
+      category: 'React',
+      cover: 'from-emerald-500/30 via-slate-900 to-slate-950',
       tech: ['ReactJS', 'Tailwind CSS', 'Django' ,"Django REST Framework", "PostgreSQL"],
       github: 'https://github.com/Khushbusaifi012/fintech-lms',
     },
@@ -28,7 +34,8 @@ const Projects = () => {
       title: 'Homestays of India',
       description:
         'Contributed extensively to Homestays of India, a full-stack homestay booking platform for discovering and booking stays across India.\nBuilt and enhanced responsive frontend features including location-based search, date and guest selection, user login, wishlists, and dark mode UI.\nDeveloped backend functionality, API integrations, and database-driven features to support homestay listings, search workflows, and live website updates.\nWorked across the complete development process from frontend pages and UI improvements to backend logic.',
-      image: '🏠',
+      category: 'Next.js',
+      cover: 'from-orange-500/30 via-slate-900 to-slate-950',
       tech: ['Next.js', 'PHP', 'MySQL', 'Laravel'],
       live: 'https://test.homestaysofindia.com/',
     },
@@ -37,9 +44,10 @@ const Projects = () => {
       title: 'Ebuild Bazaar Platforms',
       description:
         'Built Ebuild Bazaar Platforms, an eCommerce website for construction materials, renovation products, interior design, and professional home services across India.\nDesigned a Blinkit-inspired, mobile-first UI with fast browsing, category-based product discovery, trending picks, and quick-order style flows adapted for the building products marketplace.\nDeveloped full-stack features including shop sections, services (construction management, design, renovation, labour hire), project showcases, and enquiry/callback workflows.',
-      image: '🏗️',
+      category: 'Next.js',
+      cover: 'from-amber-500/30 via-slate-900 to-slate-950',
       tech: ['Next.js', 'PHP', 'MySQL', 'Laravel'],
-      live: 'https://stagedev.ebuildbazaar.in/',
+      live: 'https://platforms.ebuildbazaar.in/',
     },
   ];
 
@@ -93,6 +101,23 @@ const Projects = () => {
           </p>
         </motion.div>
 
+        <div className="mb-8 flex flex-wrap justify-center gap-2">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              type="button"
+              onClick={() => setActiveFilter(filter)}
+              className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${
+                activeFilter === filter
+                  ? 'border-teal-400 bg-teal-400 text-[#0b0e14]'
+                  : 'border-teal-500/25 text-gray-300 hover:border-teal-400/50 hover:text-teal-300'
+              }`}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+
         {/* Projects Grid */}
         <motion.div
           variants={containerVariants}
@@ -101,12 +126,17 @@ const Projects = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
         >
-          {projectsData.map((project) => {
+          <AnimatePresence>
+          {projectsData.filter((project) => activeFilter === 'All' || project.category === activeFilter).map((project) => {
             const lines = descriptionLines(project.description);
             return (
             <motion.div
               key={project.id}
+              layout
               variants={itemVariants}
+              initial="hidden"
+              animate="visible"
+              exit={{ opacity: 0, y: 16 }}
               whileHover={{ y: -4 }}
               className={`group flex h-full rounded-xl border border-teal-500/15 bg-secondary p-6 shadow-lg shadow-black/20 transition-all duration-300 hover:border-teal-400/35 hover:shadow-[0_12px_40px_-16px_rgba(45,212,191,0.18)] sm:p-7 ${
                 project.featured
@@ -115,8 +145,10 @@ const Projects = () => {
               }`}
             >
               <div className="flex h-full min-h-0 w-full flex-col">
-                <div className="mb-2 text-3xl leading-none transition-transform duration-300 group-hover:scale-[1.03] sm:text-4xl">
-                  {project.image}
+                <div className={`mb-5 flex h-24 items-end rounded-lg border border-white/10 bg-gradient-to-br p-4 ${project.cover}`}>
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/80">
+                    {project.category}
+                  </span>
                 </div>
 
                 <h3
@@ -183,6 +215,7 @@ const Projects = () => {
             </motion.div>
             );
           })}
+          </AnimatePresence>
         </motion.div>
 
         {/* View More Button */}

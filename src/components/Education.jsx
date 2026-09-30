@@ -11,7 +11,7 @@ const Education = () => {
       period: '2025 - 2027',
       description: 'Focused on Web Development, Data Structures, Artificial Intelligence and Software Engineering Principles.',
       icon: '🎓',
-      image: '/images/University.jpg',
+      image: '/images/University.webp',
       imageAlt: 'Chandigarh University logo',
     },
   ];

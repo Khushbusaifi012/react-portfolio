@@ -79,7 +79,7 @@ const About = () => {
             <div className="relative w-full max-w-[260px] sm:max-w-[300px] md:max-w-[320px]">
               <div className="glass-effect rounded-3xl overflow-hidden border border-teal-500/40 shadow-2xl shadow-black/50">
                 <img
-                  src="/images/khushbu.jpg"
+                  src="/images/khushbu.webp"
                   alt="Khushbu Saifi"
                   className="block w-full h-auto object-contain rounded-3xl"
                 />
